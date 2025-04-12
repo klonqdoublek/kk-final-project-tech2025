@@ -9,11 +9,10 @@ export default function Home() {
         <Image 
           src="/Dorm.life.svg" 
           alt="Dorm Life Logo"
-          width={200}
-          height={100}
+          width={100}
+          height={50}
         />
       </div>
-
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold">
           Welcome to Dormlife
