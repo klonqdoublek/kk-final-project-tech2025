@@ -1,6 +1,6 @@
 "use client"
 
-import { IconCirclePlusFilled, IconMail } from "@tabler/icons-react";
+import { IconCirclePlusFilled, IconHome, IconMail } from "@tabler/icons-react";
 
 import { Button } from "@/components/ui/button"
 import {
@@ -22,7 +22,7 @@ export function NavMain({
             <SidebarMenuButton
               tooltip="Home"
               className="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear">
-              <IconCirclePlusFilled />
+              <IconHome />
               <span>Home</span>
             </SidebarMenuButton>
             

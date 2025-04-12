@@ -8,14 +8,20 @@ import {
   IconDatabase,
   IconFileAi,
   IconFileDescription,
+  IconFileDollar,
   IconFileWord,
   IconFolder,
   IconHelp,
   IconInnerShadowTop,
   IconListDetails,
+  IconMessage,
+  IconPackage,
+  IconPower,
   IconReport,
   IconSearch,
   IconSettings,
+  IconTool,
+  IconUser,
   IconUsers,
 } from "@tabler/icons-react"
 
@@ -44,28 +50,28 @@ const data = {
   navMain: [
     {
       title: "Personal Info",
-      url: "#",
-      icon: IconDashboard,
+      href: "/personal",
+      icon: IconUser,
     },
     {
       title: "Bills",
-      url: "/bills",
-      icon: IconListDetails,
+      href: "/bills",
+      icon: IconFileDollar,
     },
     {
       title: "Packages",
-      url: "#",
-      icon: IconChartBar,
+      url: "/packages",
+      icon: IconPackage,
     },
     {
       title: "Chatroom",
-      url: "#",
-      icon: IconFolder,
+      url: "/chatroom",
+      icon: IconMessage,
     },
     {
       title: "Maintenance Request",
-      url: "#",
-      icon: IconUsers,
+      url: "/maintenance",
+      icon: IconTool,
     },
   ],
   navClouds: [
@@ -116,6 +122,7 @@ const data = {
       ],
     },
   ],
+  
   navSecondary: [
     {
       title: "Settings",
@@ -123,16 +130,13 @@ const data = {
       icon: IconSettings,
     },
     {
-      title: "Get Help",
+      title: "Logout",
       url: "#",
-      icon: IconHelp,
+      icon: IconPower,
     },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
-    },
+
   ],
+
   documents: [
     {
       name: "Data Library",
@@ -156,10 +160,12 @@ export function AppSidebar({
   ...props
 }) {
   return (
+    
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
+            
             <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
               <a href="#">
                 <IconInnerShadowTop className="!size-5" />
@@ -171,7 +177,6 @@ export function AppSidebar({
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
