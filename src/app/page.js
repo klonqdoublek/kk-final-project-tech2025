@@ -11,6 +11,7 @@ export default function Home() {
           alt="Dorm Life Logo"
           width={200}
           height={100}
+          priority
         />
       </div>
 

@@ -33,35 +33,37 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
+import Link from "next/link"
+
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Khaoklong",
+    email: "ipichaya.2004@gmail.com",
+    avatar: "/Khaoklong_Pic.jpg",
   },
   navMain: [
     {
-      title: "Dashboard",
+      title: "Personal Info",
       url: "#",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Bills",
+      url: "/bills",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
+      title: "Packages",
       url: "#",
       icon: IconChartBar,
     },
     {
-      title: "Projects",
+      title: "Chatroom",
       url: "#",
       icon: IconFolder,
     },
     {
-      title: "Team",
+      title: "Maintenance Request",
       url: "#",
       icon: IconUsers,
     },
@@ -161,7 +163,7 @@ export function AppSidebar({
             <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
               <a href="#">
                 <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <span className="text-base font-semibold">Dorm.life</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>

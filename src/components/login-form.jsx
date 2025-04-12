@@ -35,7 +35,7 @@ export function LoginForm({
                 <Input id="password" type="password" required />
               </div>
                 <div>
-                <Link href="/dashboard">
+                <Link href="/bills">
                 <Button>Login</Button>
                 </Link>
                 </div>
