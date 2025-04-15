@@ -1,24 +1,21 @@
-
+import { Button } from "@/components/ui/button"
 import { AppSidebar } from "@/components/app-sidebar"
-import { ChartAreaInteractive } from "@/components/chart-area-interactive"
-import { DataTable } from "@/components/data-table"
-import { SectionCards } from "@/components/section-cards"
-import { SiteHeader } from "@/components/site-header"
+
 import {
   SidebarInset,
   SidebarProvider,
 } from "@/components/ui/sidebar"
 
-import { Card } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import Link from "next/link"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-
-
-
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export default function Maintenance() {
   return (
@@ -31,14 +28,27 @@ export default function Maintenance() {
       }>
       <AppSidebar variant="inset" />
       <SidebarInset>
-        <div className= "p-4"> 
+        <div className="flex flex-row"> {/** แจ้งซ่อม /> **/}
+          <div className= "p-4" > {/** Form รายะเอียดแจ้งซ่อม /> **/}
           <div className= "p-4">
-          <h1 className= "text-2xl" > Maintenance Request </h1>
-          <h1 className= "text-xl" > ระแบบแจ้งซ่อมออนไลน์ </h1>
+            <h1 className= "text-3xl font-semi-bold" > Maintenance Request </h1>
+            <h1 className= "text-xl" > ระแบบแจ้งซ่อมออนไลน์ </h1>
           </div>
             <div className="p-4 grid gap-4 flex flex-row">
-                <Label>ประเภทงานซ่อม</Label>
-                <Input placeholder="ประเภทงานซ่อม" required />
+                <div className="flex flex-row"> 
+                <Label className="text-red-500">ประเภทงานซ่อม</Label>
+                <Label className="text-red-500">*</Label>
+                </div>
+                  <Select>
+                    <SelectTrigger className="w-[200px]">
+                    <SelectValue placeholder="เลือกประเภทงานซ่อม..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                    <SelectItem value="light">ไฟฟ้า</SelectItem>
+                    <SelectItem value="dark">เฟอร์นิเจอร์</SelectItem>
+                    <SelectItem value="system">ห้องน้ำ</SelectItem>
+                    </SelectContent>
+                  </Select>
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
                 <Label>เรื่อง</Label>
@@ -48,7 +58,7 @@ export default function Maintenance() {
                 <Label>รายละเอียด</Label>
                 <Input placeholder="รายละเอียด..." required />
             </div>
-            <div className="p-4 grid gap-4 flex flex-row"></div>
+            <div className="p-4 grid gap-4 flex flex-row">
               <Label>การนัดหมาย*</Label>
               <RadioGroup defaultValue="option-one">
                 <div className="flex items-center space-x-2">
@@ -60,19 +70,21 @@ export default function Maintenance() {
                 <Label htmlFor="option-two">ขึ้นซ่อมได้ตลอดเวลาช่วง 13.00-16.00 น.</Label>
                 </div>
               </RadioGroup>
-        </div>
-        <div className="flex flex-1 flex-col">
-          <div className="@container/main flex flex-1 flex-col gap-2">
-            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-               {/** <SectionCards /> **/}
-               {/** <div className="px-4 lg:px-6">
-                <ChartAreaInteractive />
+            </div>
+            <div className="p-4 grid gap-4 flex flex-row">
+            <Label>เบอร์โทรศัพท์*</Label>
+            <Input placeholder="063-456-xxxx" required />
+            </div>
+          </div>
+          <div className= "p-4"> {/** Photo Upload /> **/}
+            <h3 className= "p-4 font-semi-bold"> อัปโหลดรูปภาพ (สูงสุด 5 ภาพ) </h3>
+            <div className= "flex items-center">
+              <img className= "rounded-xl m-4" src="landscape-placeholder-svgrepo-com.svg" alt="upload picture here" width="500" height="600"/>
               </div>
-              <DataTable data={data} /> **/}
-              
           </div>
-          
-          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center p-4">
+          <Button variant="default" size="lg">แจ้งซ่อม</Button>
         </div>
       </SidebarInset>
     </SidebarProvider>
