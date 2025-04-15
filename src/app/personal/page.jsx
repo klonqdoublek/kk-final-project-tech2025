@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from 'next/image'
 
-export default function Home() {
+export default function Page() {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
         <div className="mb-8">

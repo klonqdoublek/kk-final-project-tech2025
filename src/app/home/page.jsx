@@ -14,7 +14,7 @@ export default function Home() {
         />
       </div>
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold">
+        <h1 className="font-display text-4xl font-bold">
           Welcome to Dormlife
         </h1>
         <h3 className="text-2xl">
