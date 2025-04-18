@@ -126,12 +126,12 @@ const data = {
   navSecondary: [
     {
       title: "Settings",
-      url: "#",
+      url: "/settings",
       icon: IconSettings,
     },
     {
       title: "Logout",
-      url: "#",
+      url: "/login",
       icon: IconPower,
     },
 

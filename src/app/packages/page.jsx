@@ -7,7 +7,7 @@ import { AppSidebar } from "@/components/app-sidebar"
 import Link from "next/link"
 import Image from 'next/image'
 
-export default function Chatroom() {
+export default function Packages() {
     return (
       <SidebarProvider
       style={

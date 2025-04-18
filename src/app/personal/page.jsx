@@ -1,9 +1,23 @@
 import { Button } from "@/components/ui/button"
+import {
+  SidebarInset,
+  SidebarProvider,
+} from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
 import Link from "next/link"
 import Image from 'next/image'
 
-export default function Page() {
+export default function Personal() {
     return (
+      <SidebarProvider
+      style={
+        {
+          "--sidebar-width": "calc(var(--spacing) * 72)",
+          "--header-height": "calc(var(--spacing) * 12)"
+        }
+      }>
+        <AppSidebar variant="inset" />
+        <SidebarInset> 
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
         <div className="mb-8">
         <Image 
@@ -29,5 +43,8 @@ export default function Page() {
         </Link>
       </div>
     </div>
+        </SidebarInset>
+        </SidebarProvider>
         )
         }
+        
