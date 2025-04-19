@@ -48,6 +48,10 @@
   --color-fifth-red: #FCF3F7;
 }
 
+.thai-text {
+  font-family: var(--font-ibm-plex-sans-thai);
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

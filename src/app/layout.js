@@ -1,4 +1,5 @@
 import { DM_Mono } from "next/font/google"
+import { IBM_Plex_Sans_Thai } from "next/font/google"
 import "./globals.css";
 
 const dm_mono = DM_Mono({
@@ -7,6 +8,12 @@ const dm_mono = DM_Mono({
   display: 'swap',
 })
 
+const ibm_plex_sans_thai = IBM_Plex_Sans_Thai({
+  weight: ['400', '500', '700'],
+  subsets: ['latin', 'thai'],
+  display: 'swap',
+  variable: '--font-ibm-plex-sans-thai',
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -15,7 +22,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={dm_mono.className}>
+    <html lang="en" className={`${dm_mono.className} ${ibm_plex_sans_thai.variable}`}>
       <body>{children}</body>
     </html>
   )

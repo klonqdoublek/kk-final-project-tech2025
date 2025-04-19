@@ -16,6 +16,32 @@ import {
 import { Calendar } from "@/components/ui/calendar"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import {
+  IconSun,
+  IconCamera,
+  IconChartBar,
+  IconDashboard,
+  IconDatabase,
+  IconFileAi,
+  IconFileDescription,
+  IconFileDollar,
+  IconFileWord,
+  IconFolder,
+  IconHelp,
+  IconInnerShadowTop,
+  IconListDetails,
+  IconMessage,
+  IconPackage,
+  IconPower,
+  IconReport,
+  IconSearch,
+  IconSettings,
+  IconTool,
+  IconUser,
+  IconUsers,
+} from "@tabler/icons-react"
+
+import { SiteHeader } from "@/components/site-header"
 
 export default function Dashboard() {
   const [date, setDate] = React.useState(new Date());
@@ -28,6 +54,7 @@ export default function Dashboard() {
       }}>
       <AppSidebar variant="inset" />
       <SidebarInset>
+      <SiteHeader> </SiteHeader>
         <div className="p-6">
           <div className="flex flex-col md:flex-row gap-6">
             {/* Left Column - 60% width on larger screens */}
@@ -35,17 +62,16 @@ export default function Dashboard() {
               {/* Welcome Card */}
               <Card className="shadow-md">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-3xl font-bold">Morning, Pichaya</CardTitle>
-                  <CardDescription className="text-lg">What would you like today?</CardDescription>
+                  <div className= "flex flex-row justify-between"> 
+                    <div className= "flex flex-col "> 
+                      <CardTitle className="text-5xl font-medium mt-2 mb-2">Morning, Pichaya</CardTitle>
+                      <CardDescription className="text-lg">What would you like today?</CardDescription>
+                    </div>
+                    <IconSun size={52}> </IconSun>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  {/* Status Section */}
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Status</h3>
-                    <Badge variant="outline" className="bg-green-50 text-green-700 hover:bg-green-100">
-                      ยื่นขออยู่หอต่อแล้ว
-                    </Badge>
-                  </div>
+                  
                   
                   {/* Upcoming Events Section */}
                   <div>
@@ -81,9 +107,16 @@ export default function Dashboard() {
               {/* Quick Menu Card */}
               <Card className="shadow-md">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-xl font-semibold">Quick Menu</CardTitle>
+                  <CardTitle className="text-xl font-semibold">Your Latest Status</CardTitle>
                 </CardHeader>
                 <CardContent>
+                  {/* Status Section */}
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2">Status</h3>
+                    <Badge variant="outline" className="bg-green-50 text-green-700 hover:bg-green-100">
+                      ยื่นขออยู่หอต่อแล้ว
+                    </Badge>
+                  </div>
                   <Carousel className="w-full">
                     <CarouselContent>
                       {[1, 2, 3, 4].map((item) => (

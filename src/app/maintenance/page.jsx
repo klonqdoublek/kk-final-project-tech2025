@@ -16,6 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { SiteHeader } from "@/components/site-header"
 
 export default function Maintenance() {
   return (
@@ -28,59 +29,60 @@ export default function Maintenance() {
       }>
       <AppSidebar variant="inset" />
       <SidebarInset>
+      <SiteHeader> </SiteHeader>
         <div className="flex flex-row gap-4 p-4">
           {/* Left container - Form */}
           <div className="w-1/2 p-4 border rounded-lg shadow-sm">
             <div className="p-4">
               <h1 className="text-3xl font-semi-bold">Maintenance Request</h1>
-              <h1 className="text-xl">ระแบบแจ้งซ่อมออนไลน์</h1>
+              <h1 className="thai-text text-xl">ระแบบแจ้งซ่อมออนไลน์</h1>
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
               <div className="flex flex-row"> 
-                <Label className="text-red-500">ประเภทงานซ่อม</Label>
+                <Label className="thai-text text-red-500">ประเภทงานซ่อม</Label>
                 <Label className="text-red-500">*</Label>
               </div>
               <Select>
                 <SelectTrigger className="w-[200px]">
-                  <SelectValue placeholder="เลือกประเภทงานซ่อม..." />
+                  <SelectValue className="thai-text" placeholder="เลือกประเภทงานซ่อม..." />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="light">ไฟฟ้า</SelectItem>
-                  <SelectItem value="dark">เฟอร์นิเจอร์</SelectItem>
-                  <SelectItem value="system">ห้องน้ำ</SelectItem>
+                  <SelectItem className="thai-text" value="light">ไฟฟ้า</SelectItem>
+                  <SelectItem className="thai-text" value="dark">เฟอร์นิเจอร์</SelectItem>
+                  <SelectItem className="thai-text" value="system">ห้องน้ำ</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
-              <Label>เรื่อง</Label>
-              <Input placeholder="เรื่อง..." required />
+              <Label className="thai-text">เรื่อง</Label>
+              <Input className="thai-text" placeholder="เรื่อง..." required />
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
-              <Label>รายละเอียด</Label>
-              <Input placeholder="รายละเอียด..." required />
+              <Label className="thai-text">รายละเอียด</Label>
+              <Input className="thai-text" placeholder="รายละเอียด..." required />
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
-              <Label>การนัดหมาย*</Label>
+              <Label className="thai-text">การนัดหมาย*</Label>
               <RadioGroup defaultValue="option-one">
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="option-one" id="option-one" />
-                  <Label htmlFor="option-one">ขึ้นซ่อมได้ตลอดเวลาช่วง 09.00-13.00 น.</Label>
+                  <Label className="thai-text" htmlFor="option-one">ขึ้นซ่อมได้ตลอดเวลาช่วง 09.00-13.00 น.</Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="option-two" id="option-two" />
-                  <Label htmlFor="option-two">ขึ้นซ่อมได้ตลอดเวลาช่วง 13.00-16.00 น.</Label>
+                  <Label className="thai-text" htmlFor="option-two">ขึ้นซ่อมได้ตลอดเวลาช่วง 13.00-16.00 น.</Label>
                 </div>
               </RadioGroup>
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
-              <Label>เบอร์โทรศัพท์*</Label>
-              <Input placeholder="063-456-xxxx" required />
+              <Label className="thai-text">เบอร์โทรศัพท์*</Label>
+              <Input className="thai-text" placeholder="063-456-xxxx" required />
             </div>
           </div>
           
           {/* Right container - Photo Upload */}
           <div className="w-1/2 p-4 border rounded-lg shadow-sm">
-            <h3 className="p-4 font-semi-bold">อัปโหลดรูปภาพ (สูงสุด 5 ภาพ)</h3>
+            <h3 className="thai-text p-4 font-bold">อัปโหลดรูปภาพ (สูงสุด 5 ภาพ)</h3>
             <div className="flex items-center justify-center p-4">
               <img 
                 className="rounded-xl" 
@@ -94,7 +96,7 @@ export default function Maintenance() {
         </div>
         
         <div className="flex flex-col items-center justify-center p-4">
-          <Button variant="default" size="lg">แจ้งซ่อม</Button>
+          <Button className="thai-text" variant="default" size="lg">แจ้งซ่อม</Button>
         </div>
       </SidebarInset>
     </SidebarProvider>
