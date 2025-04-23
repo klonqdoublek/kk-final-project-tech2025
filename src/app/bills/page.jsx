@@ -11,30 +11,11 @@ import {
 } from "@/components/ui/table"
 
 import {
-  IconSun,
-  IconCamera,
-  IconChartBar,
-  IconDashboard,
-  IconDatabase,
-  IconFileAi,
-  IconFileDescription,
-  IconFileDollar,
-  IconFileWord,
-  IconFolder,
-  IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
-  IconMessage,
-  IconPackage,
-  IconPower,
-  IconReport,
-  IconSearch,
-  IconSettings,
-  IconTool,
-  IconUser,
-  IconUsers,
-  IconCirclePlusFilled
+  IconCirclePlusFilled,
+  IconDownload,
+  IconEdit
 } from "@tabler/icons-react"
+
 
 import {
   SidebarInset,
@@ -98,7 +79,7 @@ export default function Bills() {
       <SidebarInset>
         <SiteHeader> </SiteHeader>
         <div className="pl-4 pr-4 flex flex-1 flex-col gap-4"> {/** all Container **/}
-          <h1 className="pt-4 text-3xl font-semi-bold">Billing Details</h1>
+          <h1 className="pt-4 pl-1 text-2xl font-semi-bold">Billing Details</h1>
           <div className="flex flex-row gap-2 "> {/** top Container - now flex-row for 2 columns **/}
             <div className="w-full md:w-[60%] rounded-xl border shadow-md"> {/** left Container **/}
               <div className="p-4 flex flex-col gap-2"> {/** left **/}
@@ -134,24 +115,32 @@ export default function Bills() {
                     <h3 className="text-2xl text-secondary-red font-semi-bold">Water</h3>
                     <p className="thai-text">ค่าน้ำ</p>
                   </div>
-                    <p className="p-4 text-xl text-black">฿200</p>
+                    <p className="p-4 text-xl text-secondary-red">฿200</p>
                   </div>
                   <div className="flex flex-col h-full w-42 bg-fifth-red justify-between rounded-xl">
                   <div className="p-4 flex flex-col">
                     <h3 className="text-2xl text-third-red font-semi-bold">Fine</h3>
                     <p className="thai-text" >ค่าปรับ</p>
                   </div>
-                  <p className="p-4 text-xl text-black">฿0</p>
+                  <p className="p-4 text-xl text-secondary-red">฿0</p>
                   </div>
-
                   </div>
-                  
                 </div>
+              </div>
+              <div className="pl-4 pb-2 pr-4 flex flex-row-reverse justify-between items-center">
+                <Button> <IconDownload/> Download Bills </Button>
+                <p className=" text-xs opacity-70 "> Latest Updated: 14 April 2025 16:30PM</p>
               </div>
             </div>
             <div className="w-full flex flex-col md:w-[40%] bg-white rounded-xl flex-col gap-2"> {/** right Container **/}
               <div className="p-4 h-72 border rounded-xl shadow-md"> {/** primary payment Container **/}
-                <h3 className="text-xl pb-2"> Primary Payment </h3>
+                <div className="flex flex-row justify-between"> 
+                  <h3 className="text-xl pb-2"> Primary Payment </h3>
+                  <Button variant="outline" size="icon">
+                  <IconEdit />
+                  </Button>
+                </div>
+                
                 <div className= "flex flex-row gap-4 ">
                   <img className="rounded-xl object-fill" src="kasikorn.png" alt="kasikorn" width="80" height="60" />
                   <div className="flex flex-col">
@@ -160,11 +149,12 @@ export default function Bills() {
                     <p> 601-1234-xxxx </p>
                   </div>
                 </div>
+                <p className="pt-2 pb-2 text-sm opacity-70"> *Automatically Paid on 10th of the month 17:00PM </p>
               </div>
               <div className="flex flex-row h-full justify-between p-4 border rounded-xl shadow-md"> {/** secondary payment Container **/}
                 <div> 
                   <h3 className="text-xl pb-2"> Secondary Payment </h3>
-                  <p> You have not added yet </p>
+                  <p className="italic opacity-70"> You have not added yet </p>
                 </div>
                 <IconCirclePlusFilled color="gray" size={52}> </IconCirclePlusFilled>
               </div>

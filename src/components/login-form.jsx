@@ -23,16 +23,18 @@ export function LoginForm({
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="m@example.com" required />
+                <Input id="email" type="email" placeholder="id@student.chula.ac.th" required />
               </div>
               <div className="grid gap-3">
                 <div className="flex items-center">
                   <Label htmlFor="password">Password</Label>
-                  <a href="#" className="ml-auto text-sm underline-offset-2 hover:underline">
-                    Forgot your password?
-                  </a>
+                  
                 </div>
                 <Input id="password" type="password" required />
+                <a href="#" className="ml-auto text-secondary-red text-sm underline-offset-2 hover:underline">
+                    Forgot your password?
+                  </a>
+
               </div>
                 <div>
                 <Link href="/dashboard">

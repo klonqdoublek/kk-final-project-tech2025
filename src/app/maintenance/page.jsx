@@ -39,7 +39,7 @@ export default function Maintenance() {
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
               <div className="flex flex-row"> 
-                <Label className="thai-text text-red-500">ประเภทงานซ่อม</Label>
+                <Label className="thai-text">ประเภทงานซ่อม</Label>
                 <Label className="text-red-500">*</Label>
               </div>
               <Select>
@@ -54,15 +54,26 @@ export default function Maintenance() {
               </Select>
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
-              <Label className="thai-text">เรื่อง</Label>
+              <div className="flex flex-row"> 
+                <Label className="thai-text">เรื่อง</Label>
+                <Label className="text-red-500">*</Label>
+              </div>
+              
               <Input className="thai-text" placeholder="เรื่อง..." required />
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
-              <Label className="thai-text">รายละเอียด</Label>
+              <div className="flex flex-row"> 
+                <Label className="thai-text">รายละเอียด</Label>
+                <Label className="text-red-500">*</Label>
+              </div>
               <Input className="thai-text" placeholder="รายละเอียด..." required />
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
-              <Label className="thai-text">การนัดหมาย*</Label>
+              <div className="flex flex-row"> 
+                <Label className="thai-text">การนัดหมาย</Label>
+                <Label className="text-red-500">*</Label>
+              </div>
+              
               <RadioGroup defaultValue="option-one">
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="option-one" id="option-one" />
@@ -75,7 +86,10 @@ export default function Maintenance() {
               </RadioGroup>
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
-              <Label className="thai-text">เบอร์โทรศัพท์*</Label>
+              <div className="flex flex-row"> 
+                <Label className="thai-text">เบอร์โทรศัพท์</Label>
+                <Label className="text-red-500">*</Label>
+              </div>
               <Input className="thai-text" placeholder="063-456-xxxx" required />
             </div>
           </div>
@@ -91,6 +105,7 @@ export default function Maintenance() {
                 width="400" 
                 height="500"
               />
+              
             </div>
           </div>
         </div>

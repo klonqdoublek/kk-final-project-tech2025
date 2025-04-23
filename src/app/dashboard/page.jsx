@@ -61,7 +61,7 @@ export default function Dashboard() {
             <div className="w-full md:w-[60%] flex flex-col gap-6">
               {/* Welcome Card */}
               <Card className="shadow-md">
-                <CardHeader className="pb-2">
+                <CardHeader className="">
                   <div className= "flex flex-row justify-between"> 
                     <div className= "flex flex-col "> 
                       <CardTitle className="text-5xl font-medium mt-2 mb-2">Morning, Pichaya</CardTitle>
@@ -71,21 +71,20 @@ export default function Dashboard() {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  
-                  
+                
                   {/* Upcoming Events Section */}
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">Upcoming Events</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-secondary-red">Upcoming Events</h3>
                     <Carousel className="w-full">
                       <CarouselContent>
-                        {[1, 2, 3].map((item) => (
+                        {[1, 2, 3, 4].map((item) => (
                           <CarouselItem key={item} className="basis-1/3 md:basis-1/4 pl-4">
                             <div className="p-1">
                               <Card className="overflow-hidden">
                                 <div className="aspect-square relative overflow-hidden rounded-t-lg">
                                   <img 
                                     className="object-cover w-full h-full" 
-                                    src="landscape-placeholder-svgrepo-com.svg" 
+                                    src="Dorm247Event.jpg" 
                                     alt={`Event ${item}`}
                                   />
                                 </div>
@@ -112,8 +111,7 @@ export default function Dashboard() {
                 <CardContent>
                   {/* Status Section */}
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">Status</h3>
-                    <Badge variant="outline" className="bg-green-50 text-green-700 hover:bg-green-100">
+                    <Badge variant="outline" className="h-6 bg-green-50 text-green-700 hover:bg-green-100 thai-text rounded-xl">
                       ยื่นขออยู่หอต่อแล้ว
                     </Badge>
                   </div>
@@ -126,7 +124,7 @@ export default function Dashboard() {
                               <div className="aspect-square relative overflow-hidden rounded-t-lg">
                                 <img 
                                   className="object-cover w-full h-full" 
-                                  src="landscape-placeholder-svgrepo-com.svg" 
+                                  src="Dorm247Event.jpg" 
                                   alt={`Menu Item ${item}`}
                                 />
                               </div>
@@ -145,14 +143,14 @@ export default function Dashboard() {
               </Card>
             </div>
 
-            {/* Right Column - 40% width on larger screens */}
+            {/* Right Column - 40% width */}
             <div className="w-full md:w-[40%] flex flex-col gap-6">
               <Card className="shadow-md h-full">
                 <CardHeader className="pb-2">
                   <CardTitle className="text-xl font-semibold">Calendar, Today 2025</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  {/* Calendar - Centered */}
+                  {/* Calendar */}
                   <div className="flex justify-center">
                     <Calendar
                       mode="single"
@@ -166,13 +164,14 @@ export default function Dashboard() {
                   <div>
                     <h3 className="text-lg font-semibold mb-3">News & Announcements</h3>
                     <div className="space-y-3">
-                      {[1, 2, 3].map((item) => (
-                        <Card key={item} className="bg-fifth-red hover:bg-fourth-red cursor-pointer transition-colors">
-                          <CardContent className="p-3 flex items-center">
-                            <div className="w-2 h-12 bg-secondary-red rounded-full mr-3"></div>
+                      {[1, 2, 3, 4].map((item) => (
+                        <Card key={item} className="bg-fifth-red h-24 justify-center hover:bg-fourth-red cursor-pointer transition-colors">
+                          <CardContent className="p-4 flex items-start justify-center">
+                            <div className="w-2 h-16 bg-secondary-red rounded-full mr-3"></div>
                             <div>
-                              <h4 className="font-medium">Important Announcement {item}</h4>
+                              <h4 className="font-medium">Dorm Announcement {item}</h4>
                               <p className="text-sm text-gray-600">Posted on May {item + 10}, 2025</p>
+                              <p className="text-xs text-gray-600" > ate-night snacks & chill in the courtyard — open till 1 AM! </p>
                             </div>
                           </CardContent>
                         </Card>

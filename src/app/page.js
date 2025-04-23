@@ -20,13 +20,13 @@ export default function Home() {
         <h1 className="text-4xl font-bold">
           Welcome to Dormlife
         </h1>
-        <h3 className="text-2xl">
+        <h3 className="text-2xl p-2">
           by klonqdevblek
         </h3>
       </div>
       <div>
         <Link href="/login">
-          <Button>Login Here</Button>
+          <Button>Login</Button>
         </Link>
       </div>
     </div>
