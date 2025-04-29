@@ -5,6 +5,9 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link"
 
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+
+
 export function LoginForm({
   className,
   ...props
@@ -34,6 +37,20 @@ export function LoginForm({
                 <a href="#" className="ml-auto text-secondary-red text-sm underline-offset-2 hover:underline">
                     Forgot your password?
                   </a>
+                  
+                <div className="pt-2">
+                <RadioGroup defaultValue="option-one" className="flex space-x-4">
+                 <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="option-one" id="option-one" />
+                <Label className="thai-text" htmlFor="option-one">นิสิตหอพัก</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="option-two" id="option-two" />
+                  <Label className="thai-text" htmlFor="option-two">บุคลากรหอพัก</Label>
+                </div>
+                </RadioGroup>
+
+                </div>
 
               </div>
                 <div>
