@@ -13,14 +13,14 @@ export function LoginForm({
   ...props
 }) {
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className={cn("flex flex-col gap-6 ", className)} {...props}>
       <Card className="overflow-hidden p-0">
         <CardContent className="grid p-0 md:grid-cols-2">
           <form className="p-6 md:p-8">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome back!</h1>
-                <p className="text-muted-foreground text-balance">
+                <p className="text-muted-foreground text-balance pt-2">
                   Login to Dormlife Account
                 </p>
               </div>
@@ -37,8 +37,12 @@ export function LoginForm({
                 <a href="#" className="ml-auto text-secondary-red text-sm underline-offset-2 hover:underline">
                     Forgot your password?
                   </a>
-                  
-                <div className="pt-2">
+                
+                <div className="flex flex-row"> 
+                <Label className="thai-text">Your Status</Label>
+                </div>
+                <div className="pt-4 pb-4 pl-4 border rounded-xl"> 
+                <div>
                 <RadioGroup defaultValue="option-one" className="flex space-x-4">
                  <div className="flex items-center space-x-2">
                   <RadioGroupItem value="option-one" id="option-one" />
@@ -51,7 +55,7 @@ export function LoginForm({
                 </RadioGroup>
 
                 </div>
-
+                </div>
               </div>
                 <div>
                 <Link href="/dashboard">

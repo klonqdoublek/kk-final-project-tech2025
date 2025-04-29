@@ -35,9 +35,9 @@ export default function Dashboard() {
     },
     {
       id: 2,
-      imageSrc: "Dormclose.jpg",
+      imageSrc: "avoid.jpg",
       imageAlt: "Campus Festival",
-      title: "Spring Festival 2025",
+      title: "หลีกเลี่ยงพื้นที่ดังกล่าว 31 ม.ค.",
       size: "basis-1/2 ",
     },
     {
@@ -86,14 +86,14 @@ export default function Dashboard() {
                       <CardTitle className="text-4xl font-medium ">Morning, Pichaya</CardTitle>
                       <CardDescription className="text-lg mt-2 ">What would you like today?</CardDescription>
                     </div>
-                    <IconSun size={52}> </IconSun>
+                    <IconSun color="#E87EA9" size={52}> </IconSun>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                 
                   {/* Upcoming Events Section */}
                   <div>
-                    <h3 className="text-lg font-semibold text-secondary-red mb-6">Upcoming Events</h3>
+                    <h3 className="text-lg font-semibold text-secondary-red mb-2">Upcoming Events</h3>
                   
                     <Carousel className="w-full">
                       <CarouselContent>
@@ -101,15 +101,15 @@ export default function Dashboard() {
                           <CarouselItem key={item.id} className={`${item.size} pl-4`}>
                             <div>
                               <Card className="overflow-hidden">
-                                <div className="aspect-square relative overflow-hidden rounded-t-lg">
+                                <div className=" h-[200px] relative overflow-hidden rounded-t-lg">
                                   <img 
-                                    className="object-cover p-2 h-full rounded-xl" 
+                                    className="object-fill p-2 h-100% w-100% rounded-xl" 
                                     src={item.imageSrc} 
                                     alt={item.imageAlt}
                                   />
                                 </div>
                                 <CardContent className="p-2">
-                                  <p className="text-lg thai-text font-medium pl-2">{item.title}</p>
+                                  <p className="text-lg thai-text font-medium pl-2 ">{item.title}</p>
                                   
                                 </CardContent>
                               </Card>
@@ -127,41 +127,48 @@ export default function Dashboard() {
 
               {/* Quick Menu Card */}
               <Card className="shadow-md">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-xl font-semibold">Your Latest Status</CardTitle>
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-secondary-red">Your Latest Status</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex flex-col gap-2">
                   {/* Status Section */}
-                  <div>
+                  <div className=" flex flex-row w-full justify-between items-center border pl-4 pb-2 pt-2 pr-4 rounded-xl shadow-md bg-main-red">
+                    <div className="pb-2 pt-2"> 
+                      <h2 className="thai-text font-bold text-white"> สถานะล่าสุด </h2>
+                      <p className="text-xs text-white opacity-70">Latest Updated: 14 April 2025 16:30PM</p>
+                    </div>
                     <Badge variant="outline" className="h-6 bg-green-50 text-green-700 hover:bg-green-100 thai-text rounded-xl">
                       ยื่นขออยู่หอต่อแล้ว
                     </Badge>
                   </div>
-                  {/* Commented out carousel
-                  <Carousel className="w-full">
-                    <CarouselContent>
-                      {[1, 2, 3, 4].map((item) => (
-                        <CarouselItem key={item} className="basis-1/3 md:basis-1/4 pl-4">
-                          <div className="p-1">
-                            <Card className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow">
-                              <div className="aspect-square relative overflow-hidden rounded-t-lg">
-                                <img 
-                                  className="object-cover w-full h-full" 
-                                  src="Dorm247Event.jpg" 
-                                  alt={`Menu Item ${item}`}
-                                />
-                              </div>
-                              <CardContent className="p-2">
-                                <p className="text-sm font-medium">Quick Action {item}</p>
-                              </CardContent>
-                            </Card>
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-0" />
-                    <CarouselNext className="right-0" />
-                  </Carousel> */}
+                  <div className=" flex flex-row w-full justify-center border pb-4 pt-4 pr-4 rounded-xl shadow-md ">
+                    <div className="flex flex-col items-center border-r-2 pt-6 pl-4 pb-6 pr-6">
+                      <h1 className="thai-text font-medium text-3xl"> 20 วัน</h1>
+                      <h3 className="thai-text text-sm"> จำนวนวันอยู่หอของเดือนนี้ </h3>
+                      <div className="flex flex-col p-1 items-center"> 
+                      <p className="text-xs opacity-70">Latest Updated</p>
+                      <p className="text-xs opacity-70">14 April 2025 16:30PM</p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center border-r-2 pt-6 pl-4 pb-6 pr-6">
+                      <h1 className="thai-text font-medium text-3xl"> 12ครั้ง </h1>
+                      <h3 className="thai-text text-sm"> เข้าร่วมกิจกรรมหอ </h3>
+                      <div className="flex flex-col p-1 items-center"> 
+                      <p className="text-xs opacity-70">Latest Updated</p>
+                      <p className="text-xs opacity-70">14 April 2025 16:30PM </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center pt-6 pl-6 pb-6">
+                      <h1 className="thai-text font-medium text-3xl"> 20วัน</h1>
+                      <h3 className="thai-text text-sm"> จำนวนวันอยู่หอของเดือนนี้ </h3>
+                      <div className="flex flex-col p-1 items-center"> 
+                      <p className="text-xs opacity-70">Latest Updated</p>
+                      <p className="text-xs opacity-70">14 April 2025 16:30PM</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  
                 </CardContent> 
               </Card>
             </div>
@@ -184,7 +191,7 @@ export default function Dashboard() {
                   </div>
                   
                   {/* News & Announcements - In same card below calendar */}
-                  <div className="h-80 overflow-y-scroll">
+                  <div className="h-100 overflow-y-scroll">
                     <h3 className="text-lg font-semibold mb-3">News & Announcements</h3>
                     <div className="space-y-4">
                       {[1, 2, 3, 4, 5, 6].map((item) => (
