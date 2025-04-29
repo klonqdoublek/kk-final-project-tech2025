@@ -43,8 +43,8 @@ export default function Dashboard() {
     {
       id: 3,
       imageSrc: "dormclose2.jpg",
-      imageAlt: "Graduation Ceremony",
-      title: "Graduation Day",
+      imageAlt: "ประกาศสำนักงานหอพัก",
+      title: "ประกาศสำนักงานหอพัก",
       size: "basis-1/2",
     },
     {
@@ -62,7 +62,45 @@ export default function Dashboard() {
       size: "basis-1/2 ",
     },
   ];
-  
+  const announcements = [
+    {
+      id: 1,
+      title: "ปาร์ตี้ยามดึกในลานหอ",
+      date: "May 11, 2025",
+      description: "Late-night snacks & chill in the courtyard",
+    },
+    {
+      id: 2,
+      title: "กิจกรรมรักสะอาด",
+      date: "May 12, 2025",
+      description: "Big cleaning event for shared spaces",
+    },
+    {
+      id: 3,
+      title: "กิจกรรมรักสะอาด",
+      date: "May 12, 2025",
+      description: "Big cleaning event for shared spaces",
+    },
+    {
+      id: 4,
+      title: "กิจกรรมรักสะอาด",
+      date: "May 12, 2025",
+      description: "Big cleaning event for shared spaces",
+    },
+    {
+      id: 5,
+      title: "กิจกรรมรักสะอาด",
+      date: "May 12, 2025",
+      description: "Big cleaning event for shared spaces",
+    },
+    {
+      id: 6,
+      title: "กิจกรรมรักสะอาด",
+      date: "May 12, 2025",
+      description: "Big cleaning event for shared spaces",
+    }
+    
+  ];
   
 
   return (
@@ -128,9 +166,9 @@ export default function Dashboard() {
               {/* Quick Menu Card */}
               <Card className="shadow-md">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-secondary-red">Your Latest Status</CardTitle>
+                  <CardTitle className="text-xl font-semibold">Your Latest Status</CardTitle>
                 </CardHeader>
-                <CardContent className="flex flex-col gap-2">
+                <CardContent className="flex flex-col gap-4">
                   {/* Status Section */}
                   <div className=" flex flex-row w-full justify-between items-center border pl-4 pb-2 pt-2 pr-4 rounded-xl shadow-md bg-main-red">
                     <div className="pb-2 pt-2"> 
@@ -177,7 +215,7 @@ export default function Dashboard() {
             <div className="w-full md:w-[40%] flex flex-col gap-6">
               <Card className="shadow-md h-full">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-xl font-semibold">Calendar, Today 2025</CardTitle>
+                  <CardTitle className="text-xl font-semi-bold">Calendar, Today 2025</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {/* Calendar */}
@@ -191,17 +229,17 @@ export default function Dashboard() {
                   </div>
                   
                   {/* News & Announcements - In same card below calendar */}
-                  <div className="h-100 overflow-y-scroll">
+                  <div className="h-120 overflow-y-scroll">
                     <h3 className="text-lg font-semibold mb-3">News & Announcements</h3>
                     <div className="space-y-4">
-                      {[1, 2, 3, 4, 5, 6].map((item) => (
-                        <Card key={item} className="bg-fifth-red h-24 justify-center hover:bg-fourth-red cursor-pointer transition-colors">
+                      {announcements.map((item) => (
+                        <Card key={item.id} className="bg-fifth-red h-24 justify-center hover:bg-fourth-red cursor-pointer transition-colors">
                           <CardContent className="p-4 flex items-start justify-center">
-                            <div className="w-2 h-16 bg-secondary-red rounded-full mr-3"></div>
+                            <div className="w-2 h-16 bg-secondary-red rounded-full mr-4"></div>
                             <div>
-                              <h4 className="font-medium">Dorm Announcement {item}</h4>
-                              <p className="text-sm text-gray-600">Posted on May {item + 10}, 2025</p>
-                              <p className="text-xs text-gray-600">Late-night snacks & chill in the courtyard — open till 1 AM!</p>
+                              <h4 className="font-medium">Dorm Announcement {item.title}</h4>
+                              <p className="text-sm text-gray-600">Posted on May {item.date}, 2025</p>
+                              <p className="text-xs text-gray-600"> {item.description} </p>
                             </div>
                           </CardContent>
                         </Card>

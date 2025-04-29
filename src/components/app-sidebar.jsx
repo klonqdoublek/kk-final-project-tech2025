@@ -40,6 +40,7 @@ import {
 } from "@/components/ui/sidebar"
 
 import Link from "next/link"
+import Image from 'next/image';
 
 const data = {
   user: {
@@ -164,14 +165,17 @@ export function AppSidebar({
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
         <SidebarMenu>
-          <SidebarMenuItem>
+          <SidebarMenuItem >
+            <div className="flex flex-col items-center border-b p-4">
+              <img 
+              src="Dorm.life.svg"
+              width="150" 
+              height="300">
+              </img>
+              <p className="text-sm opacity-50"> by klonqdevblek </p>
+              
+            </div>
             
-            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
-              <a href="/dashboard">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Dorm.life</span>
-              </a>
-            </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>

@@ -6,7 +6,7 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar"
 
-import { IconTool } from "@tabler/icons-react"
+import { IconTool, IconUpload } from "@tabler/icons-react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -39,7 +39,7 @@ export default function Maintenance() {
               <IconTool />
               <h1 className="text-3xl font-semi-bold">Maintenance Request</h1>
               </div>
-              <h1 className="thai-text text-xl">ระแบบแจ้งซ่อมออนไลน์</h1>
+              <h1 className="thai-text text-xl font-medium pt-2">ระแบบแจ้งซ่อมออนไลน์</h1>
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
               <div className="flex flex-row"> 
@@ -101,7 +101,7 @@ export default function Maintenance() {
           {/* Right container - Photo Upload */}
           <div className="w-1/2 p-4 border rounded-lg shadow-sm">
             <h3 className="thai-text p-4 font-bold">อัปโหลดรูปภาพ (สูงสุด 5 ภาพ)</h3>
-            <div className="flex items-center justify-center p-4">
+            <div className="flex flex-col items-center justify-center gap-6 p-4">
               <img 
                 className="rounded-xl" 
                 src="landscape-placeholder-svgrepo-com.svg" 
@@ -109,7 +109,7 @@ export default function Maintenance() {
                 width="400" 
                 height="500"
               />
-              
+              <Button variant="secondary" className="thai-text"><IconUpload/> อัปโหลดรูปภาพ </Button>
             </div>
           </div>
         </div>
