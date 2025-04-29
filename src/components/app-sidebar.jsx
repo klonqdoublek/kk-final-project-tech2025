@@ -170,7 +170,8 @@ export function AppSidebar({
               <img 
               src="Dorm.life.svg"
               width="150" 
-              height="300">
+              height="300"
+              url="/dashboard">
               </img>
               <p className="text-sm opacity-50"> by klonqdevblek </p>
               

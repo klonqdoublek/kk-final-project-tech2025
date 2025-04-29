@@ -65,39 +65,39 @@ export default function Dashboard() {
   const announcements = [
     {
       id: 1,
-      title: "ปาร์ตี้ยามดึกในลานหอ",
+      title: "รับสมัครนิสิตหอพักภาคต้นปีการศึกษา",
       date: "May 11, 2025",
-      description: "Late-night snacks & chill in the courtyard",
+      description: "ดูรายละเอียดเพิ่มเติม",
     },
     {
       id: 2,
-      title: "กิจกรรมรักสะอาด",
+      title: "การปฐมนิเทศนิสิตใหม่หอพักชั้นปีที่ 1 ประจำภาคต้น",
       date: "May 12, 2025",
-      description: "Big cleaning event for shared spaces",
+      description: "ดูรายละเอียดเพิ่มเติม",
     },
     {
       id: 3,
-      title: "กิจกรรมรักสะอาด",
-      date: "May 12, 2025",
-      description: "Big cleaning event for shared spaces",
+      title: "รับสมัครทุนช่วยเหลือนิสิตหอพัก",
+      date: "May 13, 2025",
+      description: "ดูรายละเอียดเพิ่มเติม",
     },
     {
       id: 4,
-      title: "กิจกรรมรักสะอาด",
-      date: "May 12, 2025",
-      description: "Big cleaning event for shared spaces",
+      title: "การจัดเก็บของหอพักนิสิตภาคฤดูร้อน",
+      date: "May 14, 2025",
+      description: "ดูรายละเอียดเพิ่มเติม",
     },
     {
       id: 5,
-      title: "กิจกรรมรักสะอาด",
-      date: "May 12, 2025",
-      description: "Big cleaning event for shared spaces",
+      title: "กิจกรรมอบรมและซ้อมหนีไฟ",
+      date: "May 15, 2025",
+      description: "ดูรายละเอียดเพิ่มเติม",
     },
     {
       id: 6,
-      title: "กิจกรรมรักสะอาด",
-      date: "May 12, 2025",
-      description: "Big cleaning event for shared spaces",
+      title: "รับสมัครนิสิตเข้าพักหอพัก",
+      date: "May 16, 2025",
+      description: "ดูรายละเอียดเพิ่มเติม",
     }
     
   ];
@@ -215,7 +215,7 @@ export default function Dashboard() {
             <div className="w-full md:w-[40%] flex flex-col gap-6">
               <Card className="shadow-md h-full">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-xl font-semi-bold">Calendar, Today 2025</CardTitle>
+                  <CardTitle className="text-xl font-medium">Calendar, Today 2025</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {/* Calendar */}
@@ -230,16 +230,16 @@ export default function Dashboard() {
                   
                   {/* News & Announcements - In same card below calendar */}
                   <div className="h-120 overflow-y-scroll">
-                    <h3 className="text-lg font-semibold mb-3">News & Announcements</h3>
+                    <h3 className="text-lg font-medium mb-3">News & Announcements</h3>
                     <div className="space-y-4">
                       {announcements.map((item) => (
                         <Card key={item.id} className="bg-fifth-red h-24 justify-center hover:bg-fourth-red cursor-pointer transition-colors">
-                          <CardContent className="p-4 flex items-start justify-center">
+                          <CardContent className="p-4 flex ">
                             <div className="w-2 h-16 bg-secondary-red rounded-full mr-4"></div>
                             <div>
-                              <h4 className="font-medium">Dorm Announcement {item.title}</h4>
-                              <p className="text-sm text-gray-600">Posted on May {item.date}, 2025</p>
-                              <p className="text-xs text-gray-600"> {item.description} </p>
+                              <h4 className="font-medium thai-text"> {item.title}</h4>
+                              <p className="text-xs text-gray-600">Posted on {item.date}, 2025</p>
+                              <p className="text-xs thai-text pt-2 text-gray-600"> {item.description}</p>
                             </div>
                           </CardContent>
                         </Card>
