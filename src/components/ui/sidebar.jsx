@@ -2,7 +2,7 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva } from "class-variance-authority";
-import { IconMenu2 } from "@tabler/icons-react"
+import { IconLayoutSidebarInactive } from "@tabler/icons-react"
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
@@ -240,7 +240,7 @@ function SidebarTrigger({
         toggleSidebar()
       }}
       {...props}>
-      <IconMenu2 color="white" />
+      <IconLayoutSidebarInactive color="white" />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );

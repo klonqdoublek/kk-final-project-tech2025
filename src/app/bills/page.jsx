@@ -94,44 +94,51 @@ export default function Bills() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-row contents gap-2"> {/** secondary bills **/}
-                  <div className="grid grid-flow-col grid-rows-1 gap-2"> {/** details **/}
-                    <div className="flex flex-col h-full w-42 bg-secondary-red justify-between rounded-xl">
-                      <div className="p-4 flex flex-col">
-                        <h3 className="text-2xl text-white font-semi-bold">Room Fees</h3>
-                        <p className="text-white thai-text">ค่าห้องพัก</p>
-                      </div>
-                        <p className="p-4 text-xl text-white">฿3,500</p>
-                    </div>
-                    <div className="flex flex-col h-full w-42 bg-third-red justify-between rounded-xl">
-                      <div className="p-4 flex flex-col">
-                        <h3 className="text-2xl text-white font-semi-bold">Electricity</h3>
-                        <p className="text-white thai-text" >ค่าไฟ</p>
-                      </div> 
-                        <p className="p-4 text-xl text-white">฿200</p>
-                    </div>
-                    <div className="flex flex-col h-full w-42 bg-fourth-red justify-between rounded-xl">
-                  <div className="p-4 flex flex-col">
-                    <h3 className="text-2xl text-secondary-red font-semi-bold">Water</h3>
-                    <p className="thai-text">ค่าน้ำ</p>
-                  </div>
-                    <p className="p-4 text-xl text-secondary-red">฿200</p>
-                  </div>
-                  <div className="flex flex-col h-full w-42 bg-fifth-red justify-between rounded-xl">
-                  <div className="p-4 flex flex-col">
-                    <h3 className="text-2xl text-third-red font-semi-bold">Fine</h3>
-                    <p className="thai-text" >ค่าปรับ</p>
-                  </div>
-                  <p className="p-4 text-xl text-secondary-red">฿0</p>
-                  </div>
-                  </div>
-                </div>
-              </div>
-              <div className="pl-4 pb-2 pr-4 flex flex-row-reverse justify-between items-center">
-                <Button> <IconDownload/> Download Bills </Button>
-                <p className=" text-xs opacity-70 "> Latest Updated: 14 April 2025 16:30PM</p>
-              </div>
-            </div>
+                <div className="grid grid-cols-4 gap-2">
+        {/** Room Fees **/}
+        <div className="bg-secondary-red rounded-xl flex flex-col justify-between">
+          <div className="p-4">
+            <h3 className="text-xl text-white font-semi-bold">Room Fees</h3>
+            <p className="text-white text-sm">ค่าห้อง</p>
+          </div>
+          <p className="p-4 text-2xl text-white">3,500฿</p>
+        </div>
+        
+        {/** Electricity **/}
+        <div className="bg-third-red rounded-xl flex flex-col justify-between">
+          <div className="p-4">
+            <h3 className="text-xl text-white font-semi-bold">Electricity</h3>
+            <p className="text-white text-sm">ค่าไฟ</p>
+          </div>
+          <p className="p-4 text-2xl text-white">200฿</p>
+        </div>
+        
+        {/** Water **/}
+        <div className="bg-fourth-red rounded-xl flex flex-col justify-between">
+          <div className="p-4">
+            <h3 className="text-xl text-pink-600 font-semi-bold">Water</h3>
+            <p className="text-pink-600 text-sm">ค่าน้ำ</p>
+          </div>
+          <p className="p-4 text-2xl text-pink-600">100฿</p>
+        </div>
+        
+        {/** Fine **/}
+        <div className="bg-fifth-red rounded-xl flex flex-col justify-between">
+          <div className="p-4">
+            <h3 className="text-xl text-pink-600 font-semi-bold">Fine</h3>
+            <p className="text-pink-600 text-sm">ค่าปรับ</p>
+          </div>
+          <p className="p-4 text-2xl text-pink-600">0฿</p>
+        </div>
+      </div>
+    </div>
+    
+    <div className="px-4 pb-4 flex flex-row-reverse justify-between items-center">
+      <Button> <IconDownload/> Download Bills </Button>
+      <p className="text-xs opacity-70">Latest Updated: 14 April 2025 16:30PM</p>
+    </div>
+  </div>
+
             <div className="w-full flex flex-col md:w-[40%] bg-white rounded-xl flex-col gap-2"> {/** right Container **/}
               <div className="p-4 h-72 border rounded-xl shadow-md"> {/** primary payment Container **/}
                 <div className="flex flex-row justify-between"> 

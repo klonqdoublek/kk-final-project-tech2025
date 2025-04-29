@@ -6,6 +6,7 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar"
 
+import { IconTool } from "@tabler/icons-react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -32,9 +33,12 @@ export default function Maintenance() {
       <SiteHeader> </SiteHeader>
         <div className="flex flex-row gap-4 p-4">
           {/* Left container - Form */}
-          <div className="w-1/2 p-4 border rounded-lg shadow-sm">
+          <div className="w-1/2 p-4 border rounded-lg shadow-sm ">
             <div className="p-4">
+              <div className=" flex flex-row items-center gap-2">
+              <IconTool />
               <h1 className="text-3xl font-semi-bold">Maintenance Request</h1>
+              </div>
               <h1 className="thai-text text-xl">ระแบบแจ้งซ่อมออนไลน์</h1>
             </div>
             <div className="p-4 grid gap-4 flex flex-row">
