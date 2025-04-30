@@ -167,12 +167,15 @@ export function AppSidebar({
         <SidebarMenu>
           <SidebarMenuItem >
             <div className="flex flex-col items-center border-b p-4">
-              <img 
-              src="Dorm.life.svg"
-              width="150" 
-              height="300"
-              url="/dashboard">
-              </img>
+            <Link href="/dashboard">
+            <Image 
+            src="/Dorm.life.svg"
+            width={150}
+            height={300}
+            alt="Dorm Logo"
+            className="cursor-pointer"
+            />
+            </Link>
               <p className="text-sm opacity-50"> by klonqdevblek </p>
               
             </div>

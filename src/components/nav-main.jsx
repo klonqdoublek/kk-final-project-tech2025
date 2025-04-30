@@ -21,16 +21,18 @@ export function NavMain({
       <SidebarGroupContent className="flex flex-col gap-2">
         <SidebarMenu>
           
-          <SidebarMenuItem className="flex items-center gap-2">
-            <SidebarMenuButton
-              url="/dashboard"
-              tooltip="Home"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear">
-              <IconHome />
-              <span>Home</span>
+        <SidebarMenuItem className="flex items-center gap-2">
+          <SidebarMenuButton
+            asChild
+            isActive={pathname === "/dashboard"}
+            tooltip="Home">
+            <Link href="/dashboard">
+            <IconHome />
+            <span>Home</span>
+            </Link>
             </SidebarMenuButton>
-            
           </SidebarMenuItem>
+
         </SidebarMenu>
         <SidebarMenu>
           {items.map((item) => (
