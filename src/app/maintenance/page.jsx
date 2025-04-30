@@ -47,7 +47,7 @@ export default function Maintenance() {
                 <Label className="text-red-500">*</Label>
               </div>
               <Select>
-                <SelectTrigger className="w-[200px]">
+                <SelectTrigger className="w-[200px] thai-text">
                   <SelectValue className="thai-text" placeholder="เลือกประเภทงานซ่อม..." />
                 </SelectTrigger>
                 <SelectContent>
@@ -99,20 +99,22 @@ export default function Maintenance() {
           </div>
           
           {/* Right container - Photo Upload */}
-          <div className="w-1/2 p-4 border rounded-lg shadow-sm">
+          
+          <div className="w-1/2 h-3/4 p-4 border rounded-lg shadow-sm">
             <h3 className="thai-text p-4 font-bold">อัปโหลดรูปภาพ (สูงสุด 5 ภาพ)</h3>
             <div className="flex flex-col items-center justify-center gap-6 p-4">
               <img 
                 className="rounded-xl" 
                 src="landscape-placeholder-svgrepo-com.svg" 
                 alt="upload picture here" 
-                width="400" 
-                height="500"
+                width="300" 
+                height="400"
               />
               <Button variant="secondary" className="thai-text"><IconUpload/> อัปโหลดรูปภาพ </Button>
             </div>
           </div>
         </div>
+       
         
         <div className="flex flex-col items-center justify-center p-4">
           <Button className="thai-text" variant="default" size="lg">แจ้งซ่อม</Button>

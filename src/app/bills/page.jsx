@@ -99,7 +99,7 @@ export default function Bills() {
         <div className="bg-secondary-red rounded-xl flex flex-col justify-between">
           <div className="p-4">
             <h3 className="text-xl text-white font-semi-bold">Room Fees</h3>
-            <p className="text-white text-sm">ค่าห้อง</p>
+            <p className="text-white thai-text text-sm">ค่าห้อง</p>
           </div>
           <p className="p-4 text-2xl text-white">3,500฿</p>
         </div>
@@ -108,7 +108,7 @@ export default function Bills() {
         <div className="bg-third-red rounded-xl flex flex-col justify-between">
           <div className="p-4">
             <h3 className="text-xl text-white font-semi-bold">Electricity</h3>
-            <p className="text-white text-sm">ค่าไฟ</p>
+            <p className="text-white thai-text text-sm">ค่าไฟ</p>
           </div>
           <p className="p-4 text-2xl text-white">200฿</p>
         </div>
@@ -116,8 +116,8 @@ export default function Bills() {
         {/** Water **/}
         <div className="bg-fourth-red rounded-xl flex flex-col justify-between">
           <div className="p-4">
-            <h3 className="text-xl text-pink-600 font-semi-bold">Water</h3>
-            <p className="text-pink-600 text-sm">ค่าน้ำ</p>
+            <h3 className="text-xl text-main-red font-semi-bold">Water</h3>
+            <p className="text-main-red font-semi-bold thai-text text-sm">ค่าน้ำ</p>
           </div>
           <p className="p-4 text-2xl text-pink-600">100฿</p>
         </div>
@@ -125,10 +125,10 @@ export default function Bills() {
         {/** Fine **/}
         <div className="bg-fifth-red rounded-xl flex flex-col justify-between">
           <div className="p-4">
-            <h3 className="text-xl text-pink-600 font-semi-bold">Fine</h3>
-            <p className="text-pink-600 text-sm">ค่าปรับ</p>
+            <h3 className="text-xl text-main-red font-semi-bold">Fine</h3>
+            <p className="text-main-red thai-text text-sm">ค่าปรับ</p>
           </div>
-          <p className="p-4 text-2xl text-pink-600">0฿</p>
+          <p className="p-4 text-2xl text-main-red">0฿</p>
         </div>
       </div>
     </div>
@@ -156,7 +156,7 @@ export default function Bills() {
                     <p> 601-1234-xxxx </p>
                   </div>
                 </div>
-                <p className="pt-2 pb-2 text-sm opacity-70"> *Automatically Paid on 10th of the month 17:00PM </p>
+                <p className="pt-4 text-sm opacity-70"> *Automatically Paid on 10th of the month 17:00PM </p>
               </div>
               <div className="flex flex-row h-full justify-between p-4 border rounded-xl shadow-md"> {/** secondary payment Container **/}
                 <div> 

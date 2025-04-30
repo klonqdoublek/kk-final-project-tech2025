@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { IconCirclePlusFilled, IconHome, IconMail } from "@tabler/icons-react";
+import { IconHome } from "@tabler/icons-react";
 
 import { Button } from "@/components/ui/button"
 import {
