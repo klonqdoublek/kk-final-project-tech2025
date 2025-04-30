@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
 import { Input } from "@/components/ui/input"
-import Image from "next/image"
 import { IconBell, IconMail,} from "@tabler/icons-react"
 import { Badge } from "@/components/ui/badge"
 
@@ -16,11 +15,13 @@ export function SiteHeader() {
         {/** <Separator orientation="vertical" className="mx-2 data-[orientation=vertical]:h-4" /> **/}
         {/**<h1 className="text-base font-medium">Documents</h1> **/}
         <Input className=" w-72 h-8 bg-white rounded-2xl" type="Search" placeholder="Search..." />
-        <IconBell color="white"/>
-        <IconMail color="white" />
-        <div className="ml-auto flex flex-col place-items-start">
-        <p className="text-white text-sm font-medium"> Pichaya Phulphean </p>
-        <div className="flex flex-row items-center gap-2"> 
+        <div className="ml-auto flex items-center gap-4 pr-4">
+          <IconBell color="white"/>
+          <IconMail color="white" />
+          </div>
+        <div className="flex flex-col place-items-start border-l pl-6 ">
+          <p className="text-white text-sm font-medium"> Pichaya Phulphean </p>
+          <div className="flex flex-row items-center gap-2"> 
         <Badge variant="outline" className="h-6 bg-green-50 text-green-700 hover:bg-green-100 rounded-xl">
              Online
           </Badge>

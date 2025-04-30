@@ -34,13 +34,13 @@ export default function Maintenance() {
         <div className="flex flex-row gap-4 p-4">
           {/* Left container - Form */}
           <div className="w-1/2 p-4 border rounded-lg shadow-sm ">
-            <div className="p-4">
+              <div className="p-4 bg-main-red rounded-t-lg ">
               <div className=" flex flex-row items-center gap-2">
-              <IconTool />
-              <h1 className="text-3xl font-semi-bold">Maintenance Request</h1>
+                <IconTool color="white"> </IconTool>
+                <h1 className="text-3xl text-white font-semi-bold">Maintenance Request</h1>
               </div>
-              <h1 className="thai-text text-xl font-medium pt-2">ระแบบแจ้งซ่อมออนไลน์</h1>
-            </div>
+                <h1 className="thai-text text-xl text-white font-medium pt-2">ระแบบแจ้งซ่อมออนไลน์</h1>
+              </div>
             <div className="p-4 grid gap-4 flex flex-row">
               <div className="flex flex-row"> 
                 <Label className="thai-text">ประเภทงานซ่อม</Label>
@@ -100,17 +100,17 @@ export default function Maintenance() {
           
           {/* Right container - Photo Upload */}
           
-          <div className="w-1/2 h-3/4 p-4 border rounded-lg shadow-sm">
+          <div className="w-1/2 p-4 border rounded-lg shadow-sm">
             <h3 className="thai-text p-4 font-bold">อัปโหลดรูปภาพ (สูงสุด 5 ภาพ)</h3>
             <div className="flex flex-col items-center justify-center gap-6 p-4">
               <img 
                 className="rounded-xl" 
                 src="landscape-placeholder-svgrepo-com.svg" 
                 alt="upload picture here" 
-                width="300" 
-                height="400"
+                width="350" 
+                height="450"
               />
-              <Button variant="secondary" className="thai-text"><IconUpload/> อัปโหลดรูปภาพ </Button>
+              <Button variant="secondary" className="thai-text"><IconUpload/> อัปโหลดรูปภาพ (ไม่จำเป็น) </Button>
             </div>
           </div>
         </div>
