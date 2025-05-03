@@ -31,9 +31,9 @@ export default function Maintenance() {
       <AppSidebar variant="inset" />
       <SidebarInset>
       <SiteHeader> </SiteHeader>
-        <div className="flex flex-row gap-4 p-4">
+        <div className="flex flex-col gap-4 p-4 md:flex-row">
           {/* Left container - Form */}
-          <div className="w-1/2 p-4 border rounded-lg shadow-sm ">
+          <div className="w-full md:w-1/2 p-4 border rounded-lg shadow-sm">
               <div className="p-4 bg-main-red rounded-t-lg ">
               <div className=" flex flex-row items-center gap-2">
                 <IconTool color="white"> </IconTool>
@@ -100,7 +100,7 @@ export default function Maintenance() {
           
           {/* Right container - Photo Upload */}
           
-          <div className="w-1/2 p-4 border rounded-lg shadow-sm">
+          <div className="w-full md:w-1/2 p-4 border rounded-lg shadow-sm">
             <h3 className="thai-text p-4 font-bold">อัปโหลดรูปภาพ (สูงสุด 5 ภาพ)</h3>
             <div className="flex flex-col items-center justify-center gap-6 p-4">
               <img 

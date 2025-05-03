@@ -19,9 +19,9 @@ export function SiteHeader() {
           <IconBell color="white"/>
           <IconMail color="white" />
           </div>
-        <div className="flex flex-col place-items-start border-l pl-6 ">
-          <p className="text-white text-sm font-medium"> Pichaya Phulphean </p>
-          <div className="flex flex-row items-center gap-2"> 
+        <div className="flex flex-col min-w-[120px] max-w-[200px] truncate">
+          <p className="text-white text-sm font-medium truncate"> Pichaya Phulphean </p>
+          <div className="flex flex-row items-center gap-2 "> 
         <Badge variant="outline" className="h-6 bg-green-50 text-green-700 hover:bg-green-100 rounded-xl">
              Online
           </Badge>

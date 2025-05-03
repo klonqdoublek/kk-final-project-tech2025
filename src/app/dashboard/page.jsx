@@ -116,7 +116,7 @@ export default function Dashboard() {
           <div className="flex flex-col md:flex-row gap-6">
             {/* Left Column - 60% width on larger screens */}
             <div className="w-full md:w-[60%] flex flex-col gap-6">
-              {/* Welcome Card */}
+              {/* Welcome & Greeting Card */}
               <Card className="shadow-md">
                 <CardHeader className="">
                   <div className= "flex flex-row justify-between"> 
@@ -163,7 +163,7 @@ export default function Dashboard() {
                 </CardContent>
               </Card>
 
-              {/* Quick Menu Card */}
+              {/* Status */}
               <Card className="shadow-md">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold">Your Latest Status</CardTitle>

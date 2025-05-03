@@ -6,6 +6,7 @@ import {
 import { AppSidebar } from "@/components/app-sidebar"
 import Link from "next/link"
 import Image from 'next/image'
+import { SiteHeader } from "@/components/site-header"
 
 export default function Personal() {
     return (
@@ -18,6 +19,7 @@ export default function Personal() {
       }>
         <AppSidebar variant="inset" />
         <SidebarInset> 
+          <SiteHeader></SiteHeader>
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
         <div className="mb-8">
         <Image 
@@ -33,7 +35,7 @@ export default function Personal() {
         <h1 className="text-4xl font-bold">
           Sorry, This page is under construction
         </h1>
-        <h3 className="text-2xl">
+        <h3 className="text-2xl pt-4">
           We’re still in process... Please Wait!
         </h3>
       </div>
